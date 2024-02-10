@@ -492,6 +492,7 @@ Resources:
 
   Service:
     Type: AWS::ECS::Service
+    DependsOn: PublicLoadBalancerListener
     Properties:
       ServiceName: !Ref 'ServiceName'
       Cluster: !Ref ClusterName
